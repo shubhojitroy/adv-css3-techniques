@@ -1,0 +1,40 @@
+body {
+    font-family: "Lato", "sans-serif";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.074;
+    color:$color-grey-dark;
+    // padding: /*3rem;*/ 2.1888rem; 
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden; /* CSS hack to resolve the shakiness of elements when animation comes to a halt */
+    margin-bottom: 6rem;
+
+    &--main {
+        display:block;
+        font-size: /*6rem;*/  3.75rem;
+        font-weight: 400;
+        letter-spacing: /*3.5rem;*/ 2.188rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    
+        /* animation-delay: 3s;
+        animation-iteration-count: 3; */
+    }
+    
+    &--sub {
+        display:block;
+        font-size: /*2rem;*/ 1.25rem;
+        font-weight: 700;
+        letter-spacing: /*1.75rem;*/ 1.011rem;
+    
+        animation: moveInRight 2s ease-in-out; /* shorthand syntax and CSS to figure out */
+        
+    }
+}

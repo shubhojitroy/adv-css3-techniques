@@ -1,0 +1,31 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.7525),
+        rgba($color-primary-dark, 0.753)),
+        url(../../img/hero.jpg);
+    background-size: cover;
+    position:relative;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*advanced CSS3 property */
+    /* border-bottom: 0.1875rem solid #55c57a;
+    display:block; */
+
+    &__logo-box {
+        position:absolute;
+        top: /*4rem;*/ 2.5rem;
+        left: /*4rem;*/ 2.5rem;
+    }
+    &__logo {
+        height: /*3.5rem; */   2.188rem;
+    }
+    &__text-box {
+        position:absolute;
+        top: 40%;
+        left:50%;
+        transform: translate(-50%, -50%); /*advanced CSS3 property */
+        text-align: center /*CSS espl to center the white button*/
+    }
+    
+}

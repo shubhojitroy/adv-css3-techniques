@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+html {
+  /* font-size: 10px; A very bad practise */
+  font-size: 62.5%;
+  /*User by Jonas Schmedtmann - defines what 1 rem shld be */
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/*Basic CSS Animation*/
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-6.25rem);
+            transform: translateX(-6.25rem);
+  }
+  80% {
+    -webkit-transform: translateX(0.625rem);
+            transform: translateX(0.625rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-6.25rem);
+            transform: translateX(-6.25rem);
+  }
+  80% {
+    -webkit-transform: translateX(0.625rem);
+            transform: translateX(0.625rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(6.25rem);
+            transform: translateX(6.25rem);
+  }
+  80% {
+    -webkit-transform: translateX(-0.625rem);
+            transform: translateX(-0.625rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(6.25rem);
+            transform: translateX(6.25rem);
+  }
+  80% {
+    -webkit-transform: translateX(-0.625rem);
+            transform: translateX(-0.625rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1.875rem);
+            transform: translateY(1.875rem);
+  }
+  80% {
+    -webkit-transform: translateY(-0.625rem);
+            transform: translateY(-0.625rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1.875rem);
+            transform: translateY(1.875rem);
+  }
+  80% {
+    -webkit-transform: translateY(-0.625rem);
+            transform: translateY(-0.625rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+body {
+  font-family: "Lato", "sans-serif";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.074;
+  color: #777;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  /* CSS hack to resolve the shakiness of elements when animation comes to a halt */
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: 2.188rem;
+  -webkit-animation-name: moveInLeft;
+          animation-name: moveInLeft;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  /* animation-delay: 3s;
+        animation-iteration-count: 3; */
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1.011rem;
+  -webkit-animation: moveInRight 2s ease-in-out;
+          animation: moveInRight 2s ease-in-out;
+  /* shorthand syntax and CSS to figure out */
+}
+
+.header {
+  height: 95vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.7525)), to(rgba(40, 180, 133, 0.753))), url(../../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7525), rgba(40, 180, 133, 0.753)), url(../../img/hero.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*advanced CSS3 property */
+  /* border-bottom: 0.1875rem solid #55c57a;
+    display:block; */
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+}
+
+.header__logo {
+  height: 2.188rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*advanced CSS3 property */
+  text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  background-color: orangered;
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+.btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 6.25rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+  /* font-size: 1.6rem; */
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 6.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-0.1875rem);
+          transform: translateY(-0.1875rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active {
+  -webkit-transform: translateY(-0.0625rem);
+          transform: translateY(-0.0625rem);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  color: #777;
+  background-color: #fff;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn--animated {
+  -webkit-animation: moveInBottom .7s ease-out .75s;
+          animation: moveInBottom .7s ease-out .75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+/*# sourceMappingURL=main.css.map */

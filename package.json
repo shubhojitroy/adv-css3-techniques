@@ -1,0 +1,14 @@
+{
+  "name": "natours-starter-pkg",
+  "version": "1.0.0",
+  "description": "lading page for natours starter",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "subo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
