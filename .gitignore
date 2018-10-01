@@ -1,0 +1,7 @@
+### Windows ###
+# Windows thumbnail cache files
+
+ node_modules
+ *.css
+ *.map
+ *.css.map
