@@ -1,7 +1,13 @@
 ### Windows ###
 # Windows thumbnail cache files
 
- node_modules
+ node_modules/ 
  *.css
  *.map
- *.css.map
+ main.css.map
+
+ # dependencies
+/node_modules
+node_modules
+
+npm-debug.log*
