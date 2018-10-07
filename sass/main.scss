@@ -2,12 +2,16 @@
 @import './abstracts/variables';
 @import './abstracts/mixins';
 @import './abstracts/functions';
+
 @import './base/global';
 @import './base/base';
 @import './base/animations';
 @import './base/typography';
 @import './base/utilities';
+
 @import './layout/header';
 @import './layout/grid';
+
 @import './components/btn';
+@import './components/composition';
 @import './pages/home';

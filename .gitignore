@@ -1,13 +1,29 @@
 ### Windows ###
 # Windows thumbnail cache files
 
- node_modules/ 
+# dependencies
+/node_modules
  *.css
  *.map
  main.css.map
 
- # dependencies
-/node_modules
-node_modules
 
 npm-debug.log*
+
+# IDEs and editors
+.settings/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+npm-debug.log
+
+# System Files
+.DS_Store
+Thumbs.db
