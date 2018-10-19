@@ -8,6 +8,7 @@
     background-size: cover;
     position:relative;
     background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*advanced CSS3 property */
     /* border-bottom: 0.1875rem solid #55c57a;
     display:block; */
