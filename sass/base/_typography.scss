@@ -63,6 +63,7 @@ body {
 }
 .paragraph {
     font-size: $default-font-size;
+    line-height: 1.5; //my addition;
     
 
     &:not(:last-child) {
