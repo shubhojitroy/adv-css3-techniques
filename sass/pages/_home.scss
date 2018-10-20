@@ -29,6 +29,8 @@
 }
 
 .section-stories {
+    position: relative;
     padding: 15rem 0;
-    background-color: $color-grey-light-1;
+    // background-color: $color-grey-light-1; --not reqd anymore as now we have video playing in bg --
+    
 }
